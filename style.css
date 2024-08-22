@@ -5,20 +5,36 @@
     color: white;
 }
 .navbar{
+    position: relative;
+    width: 100%;
+    z-index: 9;
     margin: -10px;
     padding: 10px;
-    background-color: rgba(0, 58, 44, 0.95)
+    background-color: rgba(0, 58, 44, 0.9)
 }
-.nav-left{
-
+.nav-right{
+    margin-top: -30px;
+}
+.nav-right a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 body{
-    background: rgba(0, 0, 0, .45) url("img/trees.png");
-    background-blend-mode: darken;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(img/Rise-Landscape.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
 }
-.header{
+.heroimg{
+    filter: brightness(50%);
+    justify-items: center;
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 2px;
+    margin-bottom: -700px;
+    width: 100%;
+}
+.title{
     padding: 100px;
     font-family: "Public Sans", sans-serif;
     text-align: center;
@@ -30,29 +46,27 @@ h2.main{
     color: white;
     font-size: 50px;
 }
-.background{
+.background-top{
     margin: -10px;
-    background: rgba(0, 0, 0, 1) url("img/Digital_Weave_landscape\ small\ scale\ -\ Burnside\ pounamu.png");
-    background-size: 100%;
+    background-color:  rgb(7, 55, 44);
 }
 .main{
     font-family: "Public Sans", sans-serif;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     height: fit-content;
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 .apps{
     font-size: small;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.4);
     height: 300px;
     align-items: center;
     justify-content: center;
 }
 .apps  div{
-    background-color: rgba(0, 0, 0, 0.384);
+    border-radius: 15px;
+    background-color: rgba(0, 171, 142, 0.2);
     width: 200px;
     height: 250px;
     margin: 10px;
@@ -60,7 +74,7 @@ h2.main{
     transition: background-color 0.3s, font-size 0.3s;
 }
 .apps  div:hover{
-    background-color: rgba(0, 0, 0, 0.644);
+    background-color: rgba(0, 171, 142, 1);
     img{height: 125px;}
     font-size: larger;
 }
@@ -71,4 +85,39 @@ h2.main{
 .apps a{
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+.other-apps a{
+    margin: 10px;
+    text-decoration: none;
+}
+.other-apps a div h2{
+    padding-top: 5px;
+    text-decoration: none;
+    color: white;
+}
+.other-apps a div{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(0, 171, 142, 0.2);;
+    transition: background-color 0.3s;
+}
+.other-apps{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+}
+.other-apps a div:hover{
+    background-color: rgba(0, 171, 142, 0.9);
+}
+
+.heading{
+    border-radius: 15px;
+    background-color: rgba(43, 86, 79, 0.685);
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
 }
