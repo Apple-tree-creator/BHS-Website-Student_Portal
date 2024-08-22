@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+a{
+    text-decoration: none;
+}
 .nav-item{
     height: 90px;
-    color: white;
 }
 .navbar{
     position: relative;
@@ -17,7 +19,6 @@
 }
 .nav-right a{
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
 }
 body{
     background-image: url(img/Rise-Landscape.jpg);
@@ -26,12 +27,11 @@ body{
     overflow-x: hidden; 
 }
 .heroimg{
-    filter: brightness(50%);
     justify-items: center;
     position: absolute;
     z-index: -1;
     top: -100px;
-    left: 2px;
+    left: 0px;
     margin-bottom: -700px;
     width: 100%;
 }
@@ -39,22 +39,18 @@ body{
     padding: 100px;
     font-family: "Public Sans", sans-serif;
     text-align: center;
-    color: white;
     font-size: 60px;
 
 }
 h2.main{
-    color: white;
     font-size: 50px;
 }
 .background{
     margin: -10px;
-    background-color:  rgb(7, 55, 44);
 }
 .main{
     font-family: "Public Sans", sans-serif;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.2);
     height: fit-content;
     padding-top: 20px;
     padding-bottom: 200px;
@@ -68,7 +64,6 @@ h2.main{
 }
 .apps  div{
     border-radius: 12px;
-    background-color: rgba(0, 171, 142, 0.2);
     width: 200px;
     height: 250px;
     margin: 10px;
@@ -76,7 +71,6 @@ h2.main{
     transition: background-color 0.3s, font-size 0.3s;
 }
 .apps  div:hover{
-    background-color: rgba(0, 171, 142, 1);
     img{height: 125px;}
     font-size: larger;
 }
@@ -85,7 +79,6 @@ h2.main{
     transition: height 0.3s;
 }
 .apps a{
-    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .other-apps a{
@@ -95,13 +88,11 @@ h2.main{
 .other-apps a div h2{
     padding-top: 5px;
     text-decoration: none;
-    color: white;
 }
 .other-apps a div{
     height: 40px;
     width: 300px;
     border-radius: 5px;
-    background-color: rgba(0, 171, 142, 0.2);;
     transition: background-color 0.3s;
 }
 .other-apps{
@@ -111,14 +102,10 @@ h2.main{
     padding: 20px;
     display: flex;
 }
-.other-apps a div:hover{
-    background-color: rgba(0, 171, 142, 0.9);
-}
+
 
 .heading{
     border-radius: 15px;
-    background-color: rgba(43, 86, 79, 0.685);
-    color: white;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -130,10 +117,8 @@ h2.main{
     left: auto;
     text-align: left;
     padding: 20px;
-    background-color: rgb(0, 58, 44);
     margin-left: auto;
     margin-right: auto;
-    color: white;
     margin: -10px;
     margin-top: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -144,4 +129,98 @@ h2.main{
     background-size: 5%;
     background-position: right;
     
+}
+
+@media (prefers-color-scheme: dark) {
+    .heroimg{
+        filter: brightness(20%);
+    }
+    .contact{
+        background-color: rgb(0, 58, 44);
+        color: white;
+    }
+    .heading{
+        color: white;
+        background-color: rgba(43, 86, 79, 0.685);
+        color: white;
+    }
+    .other-apps a div:hover{
+        background-color: rgba(0, 171, 142, 0.9);
+    }
+    .other-apps a div{
+        background-color: rgb(0, 78, 66);
+    }
+    .other-apps a div h2{
+        color: white;
+    }
+    .apps a{
+        color: rgb(255, 255, 255);
+    }
+    .apps div:hover{
+        background-color: rgb(51, 138, 123);
+    }
+    .apps div{
+        background-color: rgb(0, 78, 66);
+    }
+    .background{
+        background-color:  rgb(7, 47, 37);
+    }
+    h2.main{
+        color: white;
+    }
+    .nav-right a{
+        color: white;
+    }
+    .nav-item{
+        color: white;
+    }
+    .title{
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .title{
+        color: rgb(255, 255, 255);
+    }
+    .heroimg{
+        filter: brightness(60%);
+    }
+    .contact{
+        background-color: rgb(0, 58, 44);
+        color: white;
+    }
+    .heading{
+        color: white;
+        background-color: rgb(143, 164, 157);
+    }
+    .other-apps a div:hover{
+        background-color: rgb(66, 120, 111);
+    }
+    .other-apps a div{
+        background-color: rgb(184, 184, 184);;
+    }
+    .other-apps a div h2{
+        color: white;
+    }
+    .apps a{
+        color: rgb(255, 255, 255);
+    }
+    .apps div:hover{
+        background-color: rgb(66, 120, 111);
+    }
+    .apps div{
+        background-color: rgb(187, 208, 205);
+    }
+    .background{
+        background-color:  rgb(255, 255, 255);
+    }
+    h2.main{
+        color: white;
+    }
+    .nav-right a{
+        color: white;
+    }
+    .nav-item{
+        color: white;
+    }
 }
