@@ -5,6 +5,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Burnside Hight School student portal.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>BHS | Student Portal</title>
@@ -20,6 +21,8 @@
       </a>
     </div>
     <div class="nav-right" align="right">
+      <button onclick="toggleDarkMode()" class="but-a">Old BHS Theme</button>
+      <button onclick="toggleDarkMode()" class="but-b">New BHS Theme</button>
       <a href="https://www.burnside.school.nz/"><strong>Return to BHS</strong></a>
     </div>
   </div>
@@ -31,7 +34,7 @@
       <!--To add more simply Ctrl+V, Ctrl+C one of the buttons and change the URL and name-->
 
       <!--Message to original portal coders-->
-      <!--The links on the Google search page are not the same as the links themselfs-->
+      <!--Some of the original links were dead-->
       <div class="apps">
         <a href="https://calendar.google.com/calendar/r?tab=mc" alt="Google Calandar">
           <div>
@@ -147,16 +150,18 @@
             <h2>Google Drive</h2>
           </div>
         </a>
-        <a href="https://www.google.com/url?q=https%3A%2F%2Flogin.etv.org.nz%2Fetv%2Flogin&sa=D&sntz=1&usg=AOvVaw1GXJanmN66KtTqJ3Amv4IE">
+        <a
+          href="https://www.google.com/url?q=https%3A%2F%2Flogin.etv.org.nz%2Fetv%2Flogin&sa=D&sntz=1&usg=AOvVaw1GXJanmN66KtTqJ3Amv4IE">
           <div>
             <h2>ETV</h2>
           </div>
         </a>
-        <a href="https://taku.nzqa.govt.nz/auth/studentlogin?_gl=1*1udkm06*_ga*MTczOTg2Mjg0OS4xNzIyMzczNzkz*_ga_TFQQ681L2E*MTcyNDI3NzU1OS4yLjEuMTcyNDI3NzY4Mi4wLjAuMA..">
-        <div>
-          <h2>MyNZQA</h2>
-        </div>
-      </a>
+        <a
+          href="https://taku.nzqa.govt.nz/auth/studentlogin?_gl=1*1udkm06*_ga*MTczOTg2Mjg0OS4xNzIyMzczNzkz*_ga_TFQQ681L2E*MTcyNDI3NzU1OS4yLjEuMTcyNDI3NzY4Mi4wLjAuMA..">
+          <div>
+            <h2>MyNZQA</h2>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -167,8 +172,63 @@
     <p><strong>Phone</strong> +64 3 358 8383</p>
     <p><strong>Email</strong> admin@burnside.school.nz</p>
     <div align="right">
+      <!--Something generic goes here-->
     </div>
   </div>
+  <script>
+    // Function to get a cookie by name
+    function getCookie(name) {
+      let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([.$?*|{}()[]\\\/+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, options = {}) {
+      options = {
+        path: '/',
+        // add other defaults if necessary
+        ...options
+      };
+
+      if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+      }
+
+      let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+      for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+          updatedCookie += "=" + optionValue;
+        }
+      }
+
+      document.cookie = updatedCookie;
+    }
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+
+      // Save the state to a cookie
+      if (element.classList.contains("dark-mode")) {
+        setCookie("darkMode", "enabled", { 'max-age': 3600 * 24 * 30 }); // Cookie expires in 30 days
+      } else {
+        setCookie("darkMode", "disabled", { 'max-age': 3600 * 24 * 30 });
+      }
+    }
+
+    // Check the cookie and set the initial state
+    window.onload = function () {
+      if (getCookie("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    }
+  </script>
 </body>
 
 </html>
