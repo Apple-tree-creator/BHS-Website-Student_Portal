@@ -121,7 +121,6 @@ h2.main {
     display: flex;
     height: 300px;
     align-items: center;
-    justify-content: center;
 }
 
 .apps div {
@@ -200,7 +199,7 @@ h2.main {
 }
 
 .contact {
-    background-color: rgb(0, 58, 44);
+    background-color: rgb(13, 77, 67);
     color: white;
     position: relative;
     top: 5px;
@@ -219,6 +218,45 @@ h2.main {
     background-size: 5%;
     background-position: right;
 
+    img {
+        position: absolute;
+        right: 12%;
+        top: 35%;
+        width: 25%;
+    }
+
+}
+
+@media (max-width: 865px) {
+    .heroimg{
+        display: none;
+    }
+    .title{
+        color: black;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-right a{
+        display: none;
+    }
+}
+
+/* Apply styles when viewport width is less than or equal to 800px */
+@media (max-width: 1110px) {
+    .apps{
+        justify-content: none;
+    }
+    .contact img{
+        display: none
+    }
+}
+
+/* Apply styles when viewport width is greater than 800px */
+@media (min-width: 1111px) {
+    .apps{
+        justify-content: center;
+    }
 }
 
 .dark-mode {
@@ -241,11 +279,6 @@ h2.main {
 
     .heroimg {
         filter: brightness(40%);
-    }
-
-    .contact {
-        background-color: rgb(0, 58, 44);
-        color: white;
     }
 
     .heading {
@@ -296,10 +329,6 @@ h2.main {
     }
 
     .nav-item {
-        color: white;
-    }
-
-    .title {
         color: white;
     }
 }
