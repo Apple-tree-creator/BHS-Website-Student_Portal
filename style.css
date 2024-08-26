@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
 a {
+    font-family: "Public Sans", sans-serif;
     text-decoration: none;
+}
+
+.notice {
+    background-color: yellow;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+
+    h2 {
+        text-align: center;
+        font-family: "Public Sans", sans-serif;
+    }
 }
 
 button {
@@ -11,7 +26,7 @@ button {
     background-color: ;
 }
 
-.but-b{
+.but-b {
     display: none;
 }
 
@@ -40,7 +55,11 @@ button {
 
 .nav-right a {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Public Sans", sans-serif;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
 }
 
 body {
@@ -51,24 +70,27 @@ body {
 }
 
 .heroimg {
-    filter: brightness(70%);
+    filter: brightness(50%);
     justify-items: center;
     position: absolute;
     z-index: -1;
-    top: -100px;
+    top: -10%;
     left: 0px;
-    margin-bottom: -700px;
     width: 100%;
-    blur
 }
 
 .title {
     color: rgb(255, 255, 255);
-    padding: 100px;
+    padding-top: 5%;
+    padding-bottom: 10%;
     font-family: "Public Sans", sans-serif;
     text-align: center;
     font-size: 60px;
 
+    span {
+        font-family: "DM Serif Text", serif;
+        font-style: italic;
+    }
 }
 
 h2.main {
@@ -79,6 +101,7 @@ h2.main {
 .background {
     background-color: rgb(255, 255, 255);
     margin: -10px;
+    margin-top: -90px;
 }
 
 .main {
@@ -127,12 +150,14 @@ h2.main {
 }
 
 .apps a {
+    font-family: "Public Sans", sans-serif;
     color: rgb(255, 255, 255);
     transition: color 0.2s;
     text-decoration: none;
 }
 
 .other-apps a {
+    font-family: "Public Sans", sans-serif;
     margin: 10px;
     text-decoration: none;
 }
@@ -186,7 +211,7 @@ h2.main {
     margin-right: auto;
     margin: -10px;
     margin-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Public Sans", sans-serif;
     padding-right: 100px;
     padding-left: 50px;
     background-image: url(img/Weave.png);
@@ -197,12 +222,14 @@ h2.main {
 }
 
 .dark-mode {
-    .but-b{
+    .but-b {
         display: inline;
     }
-    .but-a{
+
+    .but-a {
         display: none;
     }
+
     button {
         background-color: rgba(7, 47, 37, 0.8);
         color: white;
