@@ -21,10 +21,11 @@ a {
     }
 }
 
+.slogan {display: none}
+
 button {
     border-radius: 0;
     margin-right: 5px;
-    background-color: ;
 }
 
 .but-b {
@@ -270,6 +271,16 @@ h2.main {
 .dark-mode {
     .but-b {
         display: inline;
+    }
+
+    .slogan{
+        display: inline;
+        display: none;
+        color: white;
+        font-size: medium;
+        position: absolute;
+        top: 75px;
+        left: 20px;
     }
 
     .but-a {
