@@ -73,13 +73,14 @@ body {
 }
 
 .heroimg {
-    filter: brightness(50%);
+    filter: brightness(70%);
     justify-items: center;
     position: absolute;
     z-index: -1;
-    top: -10%;
+    top: -15%;
     left: 0px;
     width: 100%;
+    transition: top 0.5s;
 }
 
 .title {
@@ -89,7 +90,7 @@ body {
     font-family: "Public Sans", sans-serif;
     text-align: center;
     font-size: 60px;
-
+    text-shadow: 5px 5px 10px black;
     span {
         font-family: "DM Serif Text", serif;
         font-style: italic;
@@ -235,18 +236,14 @@ h2.main {
 
 }
 
-@media (max-width: 865px) {
-    .heroimg{
-        display: none;
-    }
-    .title{
-        color: black;
-    }
-}
+
 
 @media (max-width: 700px) {
     .nav-right a{
         display: none;
+    }
+    .heroimg{
+        top: 0%;
     }
 }
 
@@ -296,7 +293,7 @@ h2.main {
     }
 
     .heroimg {
-        filter: brightness(40%);
+        filter: brightness(50%);
     }
 
     .heading {
