@@ -141,15 +141,14 @@ h2.main {
 
 .apps div:hover {
     img {
-        height: 125px;
+        height: 145px;
     }
-
     background-color: rgb(2, 81, 112);
     font-size: larger;
 }
 
 .apps div img {
-    height: 100px;
+    height: 90px;
     transition: height 0.3s;
 }
 
@@ -207,7 +206,7 @@ h2.main {
 }
 
 .contact {
-    background-color: rgb(13, 77, 67);
+    background-color: rgb(11, 60, 79);
     color: white;
     position: relative;
     top: 5px;
@@ -327,7 +326,7 @@ h2.main {
     }
 
     .apps div:hover {
-        background-color: rgb(51, 138, 123);
+        background-color: rgb(41, 104, 92);
     }
 
     .apps div {
@@ -349,5 +348,8 @@ h2.main {
 
     .nav-item {
         color: white;
+    }
+    .contact{
+        background-color: rgb(7, 55, 44);
     }
 }
