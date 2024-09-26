@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
+/* The first 250 lines are a mess and I don't plan to clean it */
 a {
     font-family: "Public Sans", sans-serif;
     text-decoration: none;
@@ -14,14 +15,16 @@ a {
     top: 100px;
     width: 100%;
     transition: background-color 0.3s;
-    
+
     h2 {
         text-align: center;
         font-family: "Public Sans", sans-serif;
     }
 }
 
-.slogan {display: none}
+.slogan {
+    display: none
+}
 
 button {
     border-radius: 0;
@@ -80,7 +83,7 @@ body {
     top: -15%;
     left: 0px;
     width: 100%;
-    transition: top 0.5s;
+    transition: top 0.5s, filter 0.5s;
 }
 
 .title {
@@ -91,6 +94,7 @@ body {
     text-align: center;
     font-size: 60px;
     text-shadow: 5px 5px 10px black;
+
     span {
         font-family: "DM Serif Text", serif;
         font-style: italic;
@@ -122,6 +126,7 @@ h2.main {
     flex-wrap: nowrap;
     overflow-x: auto;
     overscroll-behavior-x: auto;
+    overflow-y: hidden;
     font-size: small;
     display: flex;
     height: 300px;
@@ -137,15 +142,17 @@ h2.main {
     height: 250px;
     margin: 10px;
     align-content: center;
-    transition: background-color 0.3s, font-size 0.3s, outline 0.3s;
+    transition: background-color 0.3s, font-size 0.3s, outline 0.3s, height 0.3s;
 }
 
 .apps div:hover {
     img {
         height: 145px;
     }
+
     background-color: rgb(2, 81, 112);
     font-size: larger;
+    height: 290px;
 }
 
 .apps div img {
@@ -239,27 +246,29 @@ h2.main {
 
 
 @media (max-width: 700px) {
-    .nav-right a{
+    .nav-right a {
         display: none;
     }
-    .heroimg{
+
+    .heroimg {
         top: 0%;
     }
 }
 
 /* Apply styles when viewport width is less than or equal to 800px */
 @media (max-width: 1110px) {
-    .apps{
+    .apps {
         justify-content: none;
     }
-    .contact img{
+
+    .contact img {
         display: none
     }
 }
 
 /* Apply styles when viewport width is greater than 800px */
 @media (min-width: 1111px) {
-    .apps{
+    .apps {
         justify-content: center;
     }
 }
@@ -269,7 +278,7 @@ h2.main {
         display: inline;
     }
 
-    .slogan{
+    .slogan {
         display: inline;
         display: none;
         color: white;
@@ -346,7 +355,8 @@ h2.main {
     .nav-item {
         color: white;
     }
-    .contact{
+
+    .contact {
         background-color: rgb(7, 55, 44);
     }
 }
