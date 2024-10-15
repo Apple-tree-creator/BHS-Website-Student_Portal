@@ -35,16 +35,6 @@ button {
     display: none;
 }
 
-.nav-item {
-    transition: background-color 0.3s;
-    height: 90px;
-    color: white;
-}
-
-.nav-item:hover {
-    background-color: rgb(2, 46, 36);
-}
-
 .navbar {
     background-color: rgba(0, 56, 78, 0.9);
     transition: background-color 0.3s;
@@ -53,20 +43,28 @@ button {
     z-index: 9;
     margin: -10px;
     padding: 10px;
+
+    .nav-right {
+        margin-top: -30px;
+
+
+        a {
+            color: white;
+            font-family: "Public Sans", sans-serif;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .nav-left img {
+        transition: background-color 0.3s;
+        height: 90px;
+        color: white;
+    }
 }
 
-.nav-right {
-    margin-top: -30px;
-}
-
-.nav-right a {
-    color: white;
-    font-family: "Public Sans", sans-serif;
-}
-
-.nav-right a:hover {
-    text-decoration: underline;
-}
 
 body {
     background-image: url(img/Rise-Landscape.jpg);
@@ -75,15 +73,21 @@ body {
     overflow-x: hidden;
 }
 
+
 .heroimg {
-    filter: brightness(70%);
-    justify-items: center;
+    filter: blur(0px);
     position: absolute;
-    z-index: -1;
     top: -15%;
     left: 0px;
     width: 100%;
-    transition: top 0.5s, filter 0.5s;
+    z-index: -1;
+    transition: filter 0.2s;
+
+    img {
+        filter: brightness(100%);
+        justify-items: center;
+        transition: top 0.2s, left 0.2s, width 0.2s;
+    }
 }
 
 .title {
@@ -121,6 +125,8 @@ h2.main {
     padding-bottom: 200px;
 }
 
+
+
 .apps {
     background-color: rgb(0, 56, 78);
     flex-wrap: nowrap;
@@ -132,62 +138,40 @@ h2.main {
     height: 300px;
     align-items: center;
     transition: background-color 0.3s;
-}
 
-.apps div {
-    outline: 1px white solid;
-    background-color: rgb(0, 56, 78);
-    border-radius: 5px;
-    width: 200px;
-    height: 250px;
-    margin: 10px;
-    align-content: center;
-    transition: background-color 0.3s, font-size 0.3s, outline 0.3s, height 0.3s;
-}
-
-.apps div:hover {
-    img {
-        height: 145px;
+    div {
+        outline: 1px white solid;
+        background-color: rgb(0, 56, 78);
+        border-radius: 5px;
+        width: 200px;
+        height: 250px;
+        margin: 10px;
+        align-content: center;
+        transition: background-color 0.3s, font-size 0.3s, outline 0.3s, height 0.3s;
     }
 
-    background-color: rgb(2, 81, 112);
-    font-size: larger;
-    height: 290px;
-}
+    div:hover {
+        img {
+            height: 145px;
+        }
 
-.apps div img {
-    height: 90px;
-    transition: height 0.3s;
-}
+        background-color: rgb(2, 81, 112);
+        font-size: larger;
+        height: 290px;
+    }
 
-.apps a {
-    font-family: "Public Sans", sans-serif;
-    color: rgb(255, 255, 255);
-    transition: color 0.2s;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    div img {
+        height: 90px;
+        transition: height 0.3s;
+    }
 
-.other-apps a {
-    font-family: "Public Sans", sans-serif;
-    margin: 10px;
-    text-decoration: none;
-}
-
-.other-apps a div h2 {
-    transition: color 0.3s;
-    color: white;
-    padding-top: 5px;
-    text-decoration: none;
-}
-
-.other-apps div {
-    height: 40px;
-    width: 300px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    outline: 1px white solid;
-    background-color: rgb(0, 56, 78);
+    a {
+        font-family: "Public Sans", sans-serif;
+        color: rgb(255, 255, 255);
+        transition: color 0.2s;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
 }
 
 .other-apps {
@@ -196,6 +180,28 @@ h2.main {
     justify-content: center;
     padding: 20px;
     display: flex;
+
+    a {
+        font-family: "Public Sans", sans-serif;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    div {
+        h2 {
+            transition: color 0.3s;
+            color: white;
+            padding-top: 5px;
+            text-decoration: none;
+        }
+
+        height: 40px;
+        width: 300px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        outline: 1px white solid;
+        background-color: rgb(0, 56, 78);
+    }
 }
 
 .other-apps div:hover {
@@ -250,8 +256,18 @@ h2.main {
         display: none;
     }
 
-    .heroimg {
+    .heroimg img {
         top: 0%;
+    }
+}
+
+@media (max-width: 440px) {
+    .heroimg img {
+        display: none;
+    }
+
+    .title {
+        color: black;
     }
 }
 
@@ -302,7 +318,13 @@ h2.main {
     }
 
     .heroimg {
-        filter: brightness(50%);
+        filter: blur(5px);
+        left: -5px;
+        width: 101%;
+
+        img {
+            filter: brightness(50%);
+        }
     }
 
     .heading {
@@ -310,34 +332,36 @@ h2.main {
         background-color: rgba(23, 77, 72, 0.664);
     }
 
-    .other-apps a div:hover {
-        background-color: rgba(0, 171, 142, 0.9);
-    }
+    .other-apps a {
+        div:hover {
+            background-color: rgba(0, 171, 142, 0.9);
+        }
 
-    .other-apps a div {
-        outline: none;
-        background-color: rgb(0, 78, 66);
-    }
+        div {
+            outline: none;
+            background-color: rgb(0, 78, 66);
 
-    .other-apps a div h2 {
-        color: white;
+            h2 {
+                color: white;
+            }
+        }
     }
 
     .apps {
         background-color: rgb(7, 55, 44);
-    }
 
-    .apps a {
-        color: rgb(255, 255, 255);
-    }
+        a {
+            color: rgb(255, 255, 255);
+        }
 
-    .apps div:hover {
-        background-color: rgb(41, 104, 92);
-    }
+        div:hover {
+            background-color: rgb(41, 104, 92);
+        }
 
-    .apps div {
-        outline: none;
-        background-color: rgb(0, 78, 66);
+        div {
+            outline: none;
+            background-color: rgb(0, 78, 66);
+        }
     }
 
     .background {
