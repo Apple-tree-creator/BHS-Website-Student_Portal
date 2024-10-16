@@ -239,6 +239,13 @@ h2.main {
     background-size: 5%;
     background-position: right;
     transition: background-color 0.3s;
+    a{
+        color: white;
+        font-family: "Public Sans", sans-serif;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 
     img {
         position: absolute;
