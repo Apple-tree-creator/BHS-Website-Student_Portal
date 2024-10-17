@@ -8,46 +8,246 @@ a {
 }
 
 
-.notice {
-    background-color: yellow;
-    padding: 5px;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    transition: background-color 0.3s;
 
-    h2 {
+
+
+body {
+    background-image: url(img/Rise-Landscape.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    font-family: "Public Sans", sans-serif;
+    text-align: center;
+    height: fit-content;
+
+
+
+    .heading {
+        z-index: 2;
+        color: white;
+        background-color: rgb(11, 60, 79);
+        transition: background-color 0.3s;
+        border-radius: 7px;
+        padding: 20px;
         text-align: center;
-        font-family: "Public Sans", sans-serif;
     }
-}
 
-.slogan {
-    display: none
-}
+    .notice {
+        z-index: 10;
+        background-color: yellow;
+        padding: 5px;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        transition: background-color 0.3s;
 
-button {
-    border-radius: 0;
-    margin-right: 5px;
-}
+        h2 {
+            text-align: center;
+            font-family: "Public Sans", sans-serif;
+        }
+    }
 
-.but-b {
-    display: none;
-}
 
-.navbar {
-    background-color: rgba(0, 56, 78, 0.9);
-    transition: background-color 0.3s;
-    position: relative;
-    width: 100%;
-    z-index: 9;
-    margin: -10px;
-    padding: 10px;
+    button {
+        z-index: 2;
+        border-radius: 0;
+        margin-right: 5px;
+    }
 
-    .nav-right {
-        margin-top: -30px;
+    .but-b {
+        display: none;
+    }
 
+    .navbar {
+        background-color: rgba(0, 56, 78, 0.9);
+        transition: background-color 0.3s;
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        margin: -10px;
+        padding: 10px;
+
+        .slogan {
+            display: none
+        }
+
+
+        .nav-right {
+            margin-top: -30px;
+
+
+            a {
+                color: white;
+                font-family: "Public Sans", sans-serif;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .nav-left img {
+            transition: background-color 0.3s;
+            height: 90px;
+            color: white;
+        }
+    }
+
+    .heroimg {
+        filter: blur(0px);
+        position: absolute;
+        top: -15%;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        transition: filter 0.2s;
+
+        img {
+            filter: brightness(90%);
+            justify-items: center;
+            transition: top 0.2s, left 0.2s, width 0.2s;
+        }
+    }
+
+    .title {
+        z-index: 1;
+        color: rgb(255, 255, 255);
+        padding-top: 5%;
+        padding-bottom: 10%;
+        font-family: "Public Sans", sans-serif;
+        text-align: center;
+        font-size: 60px;
+        text-shadow: 5px 5px 10px black;
+
+        span {
+            font-family: "DM Serif Text", serif;
+            font-style: italic;
+        }
+    }
+
+
+    .background {
+        z-index: 0;
+        background-color: rgb(255, 255, 255);
+        margin: -10px;
+        margin-top: -90px;
+        padding-bottom: 150px;
+        transition: background-color 0.3s;
+    }
+
+    .apps {
+        z-index: 2;
+        background-color: rgb(0, 56, 78);
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overscroll-behavior-x: auto;
+        overflow-y: hidden;
+        scrollbar-color: slategrey rgb(0, 56, 78);
+        font-size: small;
+        display: flex;
+        height: 300px;
+        position: relative;
+        top: 20px;
+        align-items: center;
+        transition: background-color 0.3s;
+
+        div {
+            z-index: 3;
+            outline: 1px white solid;
+            background-color: rgb(0, 56, 78);
+            border-radius: 5px;
+            width: 200px;
+            height: 250px;
+            margin: 10px;
+            align-content: center;
+            transition: background-color 0.3s, font-size 0.3s, outline 0.3s, height 0.3s;
+        }
+
+        div:hover {
+            img {
+                height: 145px;
+            }
+
+            background-color: rgb(2, 81, 112);
+            font-size: larger;
+            height: 280px;
+        }
+
+        div img {
+            z-index: 4;
+            height: 90px;
+            transition: height 0.3s;
+        }
+
+        a {
+            font-family: "Public Sans", sans-serif;
+            color: rgb(255, 255, 255);
+            transition: color 0.2s;
+            text-decoration: none;
+            transition: color 0.3s;
+            z-index: 4;
+        }
+    }
+
+    .other-apps {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        display: flex;
+
+        a {
+            font-family: "Public Sans", sans-serif;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        div {
+            z-index: 2;
+
+            h2 {
+                transition: color 0.3s;
+                color: white;
+                padding-top: 5px;
+                text-decoration: none;
+            }
+
+            height: 40px;
+            width: 300px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            outline: 1px white solid;
+            background-color: rgb(0, 56, 78);
+        }
+
+        div:hover {
+            background-color: rgb(13, 113, 152);
+        }
+    }
+
+    .contact {
+        z-index: 2;
+        background-color: rgb(11, 60, 79);
+        color: white;
+        position: relative;
+        top: 5px;
+        left: auto;
+        text-align: left;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: -10px;
+        margin-top: 0px;
+        font-family: "Public Sans", sans-serif;
+        padding-right: 100px;
+        padding-left: 50px;
+        background-image: url(img/Weave.png);
+        background-repeat: no-repeat;
+        background-size: 5%;
+        background-position: right;
+        transition: background-color 0.3s;
 
         a {
             color: white;
@@ -57,208 +257,18 @@ button {
         a:hover {
             text-decoration: underline;
         }
-    }
 
-    .nav-left img {
-        transition: background-color 0.3s;
-        height: 90px;
-        color: white;
-    }
-}
-
-
-body {
-    background-image: url(img/Rise-Landscape.jpg);
-    background-repeat: repeat;
-    background-size: 100%;
-    overflow-x: hidden;
-    background-color: rgb(255, 255, 255)
-}
-
-
-.heroimg {
-    filter: blur(0px);
-    position: absolute;
-    top: -15%;
-    left: 0px;
-    width: 100%;
-    z-index: -1;
-    transition: filter 0.2s;
-
-    img {
-        filter: brightness(90%);
-        justify-items: center;
-        transition: top 0.2s, left 0.2s, width 0.2s;
-    }
-}
-
-.title {
-    color: rgb(255, 255, 255);
-    padding-top: 5%;
-    padding-bottom: 10%;
-    font-family: "Public Sans", sans-serif;
-    text-align: center;
-    font-size: 60px;
-    text-shadow: 5px 5px 10px black;
-
-    span {
-        font-family: "DM Serif Text", serif;
-        font-style: italic;
-    }
-}
-
-h2.main {
-    color: white;
-    font-size: 50px;
-}
-
-.background {
-    background-color: rgb(255, 255, 255);
-    margin: -10px;
-    margin-top: -90px;
-    transition: background-color 0.3s;
-}
-
-.main {
-    font-family: "Public Sans", sans-serif;
-    text-align: center;
-    height: fit-content;
-    padding-top: 20px;
-    padding-bottom: 200px;
-}
-
-
-.apps {
-    background-color: rgb(0, 56, 78);
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overscroll-behavior-x: auto;
-    overflow-y: hidden;
-    scrollbar-color: slategrey rgb(0, 56, 78);
-    font-size: small;
-    display: flex;
-    height: 300px;
-    align-items: center;
-    transition: background-color 0.3s;
-
-    div {
-        outline: 1px white solid;
-        background-color: rgb(0, 56, 78);
-        border-radius: 5px;
-        width: 200px;
-        height: 250px;
-        margin: 10px;
-        align-content: center;
-        transition: background-color 0.3s, font-size 0.3s, outline 0.3s, height 0.3s;
-    }
-
-    div:hover {
         img {
-            height: 145px;
+            z-index: 3;
+            position: absolute;
+            right: 12%;
+            top: 35%;
+            width: 25%;
         }
 
-        background-color: rgb(2, 81, 112);
-        font-size: larger;
-        height: 280px;
-    }
-
-    div img {
-        height: 90px;
-        transition: height 0.3s;
-    }
-
-    a {
-        font-family: "Public Sans", sans-serif;
-        color: rgb(255, 255, 255);
-        transition: color 0.2s;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-}
-
-.other-apps {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    display: flex;
-
-    a {
-        font-family: "Public Sans", sans-serif;
-        margin: 10px;
-        text-decoration: none;
-    }
-
-    div {
-        h2 {
-            transition: color 0.3s;
-            color: white;
-            padding-top: 5px;
-            text-decoration: none;
-        }
-
-        height: 40px;
-        width: 300px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        outline: 1px white solid;
-        background-color: rgb(0, 56, 78);
-    }
-}
-
-.other-apps div:hover {
-    background-color: rgb(13, 113, 152);
-}
-
-
-.heading {
-    color: white;
-    background-color: rgb(11, 60, 79);
-    transition: background-color 0.3s;
-    border-radius: 7px;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact {
-    background-color: rgb(11, 60, 79);
-    color: white;
-    position: relative;
-    top: 5px;
-    left: auto;
-    text-align: left;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin: -10px;
-    margin-top: 0;
-    font-family: "Public Sans", sans-serif;
-    padding-right: 100px;
-    padding-left: 50px;
-    background-image: url(img/Weave.png);
-    background-repeat: no-repeat;
-    background-size: 5%;
-    background-position: right;
-    transition: background-color 0.3s;
-
-    a {
-        color: white;
-        font-family: "Public Sans", sans-serif;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    img {
-        position: absolute;
-        right: 12%;
-        top: 35%;
-        width: 25%;
     }
 
 }
-
 
 @media (max-width: 700px) {
     .nav-right a {
@@ -358,7 +368,7 @@ h2.main {
 
     .apps {
         background-color: rgb(7, 55, 44);
-        scrollbar-color:  rgb(14, 107, 85) rgb(7, 55, 44);
+        scrollbar-color: rgb(14, 107, 85) rgb(7, 55, 44);
 
         a {
             color: rgb(255, 255, 255);
