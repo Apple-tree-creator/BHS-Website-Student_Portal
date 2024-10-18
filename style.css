@@ -144,7 +144,7 @@ body {
         overflow-x: auto;
         overscroll-behavior-x: auto;
         overflow-y: hidden;
-        scrollbar-color: slategrey rgb(0, 56, 78);
+        scrollbar-color: slategray rgb(0, 56, 78);
         font-size: small;
         display: flex;
         height: 300px;
@@ -368,7 +368,7 @@ body {
 
     .apps {
         background-color: rgb(7, 55, 44);
-        scrollbar-color: rgb(14, 107, 85) rgb(7, 55, 44);
+        scrollbar-color: rgb(0, 78, 66) rgb(7, 55, 44);
 
         a {
             color: rgb(255, 255, 255);
