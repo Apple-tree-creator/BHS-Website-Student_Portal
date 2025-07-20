@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>BHS | Student Portal</title>
-  <link rel="icon" type="image/x-icon" href="./favicon.jpg" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon.jpg')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
   <div class="navbar">
     <div class="nav-left" align="left">
       <a href="https://www.burnside.school.nz/">
-        <img src="./img/Burnside Logo - Primary Horizontal - white RGB.png" alt="Home button">
+        <img src="{{url_for('static', filename='img/BHSLogo.png')}}" alt="Home button">
         <h1 class="slogan">recte sic dirige cursum</h1>
       </a>
     </div>
@@ -34,7 +34,7 @@
   </div>
   <h1 class="title">Student Portal<br><span>Kia ora!</span></h1>
   <div class="heroimg">
-      <img class="heroimg" src="img/tree1.jpg">
+      <img class="heroimg" src="{{url_for('static', filename='img/tree1.jpg')}}">
   </div>
   <div class="background">
     <!--App buttons-->
@@ -49,34 +49,34 @@
       </a> -->
       <a href="https://drive.google.com/drive/u/0/my-drive">
         <div>
-          <img src="img/Drive.png" alt="Google Drive">
+          <img src="{{url_for('static', filename='img/drive.png')}}" alt="Google Drive">
           <h2>Google Drive</h2>
         </div>
       </a>
       <a
         href="https://mail.google.com/">
         <div>
-          <img src="img/Gmail-logo.png" alt="G mail">
+          <img src="{{url_for('static', filename='img/Gmail-logo.png')}}" alt="G mail">
           <h2>Gmail</h2>
         </div>
       </a>
       <a
         href="https://burnside.school.kiwi/">
         <div>
-          <img src="img/schoolkiwi.png" alt="School Kiwi">
+          <img src="{{url_for('static', filename='img/schoolkiwi.png')}}" alt="School Kiwi">
           <h2>School Kiwi</h2>
         </div>
       </a>
       <a
         href="https://schoology.burnside.school.nz/">
         <div>
-          <img src="img/Schoology-icon.png" alt="Schoology">
+          <img src="{{url_for('static', filename='img/schoology-icon.png')}}" alt="Schoology">
           <h2>Schoology</h2>
         </div>
       </a>
       <a href="https://lfilr01.burnside.school.nz:8443/filr/login">
         <div>
-          <img src="img/microfocus.png" alt="H Drive">
+          <img src="{{url_for('static', filename='img/microfocus.png')}}" alt="H Drive">
           <h2>Flir</h2>
         </div>
       </a>
@@ -200,7 +200,7 @@
     <p><a href="mailto:admin@burnside.school.nz?subject=New Student Portal Support"><strong>Email</strong>
         admin@burnside.school.nz</a></p>
     <div align="right">
-      <img src="img/Values.png" alt="Values">
+      <img src="{{url_for('static', filename='img/Values.png')}}" alt="Values">
     </div>
   </div>
   <!--I hate JS, I want HTML to use Python-->
